@@ -5,7 +5,9 @@
 class Circle : public Shape
 {
 public:
+    
     Circle(double r);
+    Circle(double r, Color);
     Circle(const Circle & other) = default;
 
     double getArea() const noexcept override;
