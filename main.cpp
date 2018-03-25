@@ -76,9 +76,30 @@ void findFirstShapeMatchingPredicate(const Collection& collection,
     }
 }
 
+constexpr int fibonacci(const int n)
+{
+    if (n <= 2)
+    {
+        return 1;
+    }
+    return fibonacci(n-1) + fibonacci(n-2);
+}
+
 int main()
 {
-    Collection shapes;
+    constexpr int x = fibonacci(20);
+    cout << "Fibonacci: " << x << endl;
+    Collection shapes
+    {
+        new Circle(2.0),
+        new Circle(3.0),
+        nullptr,
+        new Circle(4.0),
+        new Rectangle(10.0, 5.0),
+        new Square(3.0),
+        new Circle(4.0)
+    };
+    /*
     shapes.push_back(new Circle(2.0));
     shapes.push_back(new Circle(3.0));
     shapes.push_back(nullptr);
@@ -86,7 +107,7 @@ int main()
     shapes.push_back(new Rectangle(10.0, 5.0));
     shapes.push_back(new Square(3.0));
     shapes.push_back(new Circle(4.0));
-
+*/
     printCollectionElements(shapes);
 
     cout << "Areas before sort: " << std::endl;
