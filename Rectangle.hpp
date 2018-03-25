@@ -10,7 +10,7 @@ public:
 
     double getArea() const;
     double getPerimeter() const;
-    double getX() const;
+    virtual double getX() const final;
     double getY() const;
     void print() const;
 

@@ -8,10 +8,10 @@ public:
     Circle(double r);
     Circle(const Circle & other) = default;
 
-    double getArea() const;
-    double getPerimeter() const;
+    double getArea() const override;
+    double getPerimeter() const override;
     double getRadius() const;
-    void print() const;
+    void print() const override;
 
 private:
     Circle() = delete; // doesn't allow to call default constructor
